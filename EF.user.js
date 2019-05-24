@@ -8,11 +8,14 @@
 // @grant        none
 // ==/UserScript==
 
-
 function polling() {
-    if($("div[class='ets-ui-acc-bd-main']")[0].childElementCount>0){
-        console.log("submit")
-        submit()
+    try {
+        if ($("div[class='ets-ui-acc-bd-main']")[0].childElementCount > 0) {
+            console.log("submit")
+            submit()
+        }
+    } catch (err) {
+        console.log(err)
     }
     setTimeout(function () {
         console.log("waiting")
