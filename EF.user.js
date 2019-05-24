@@ -30,7 +30,7 @@ function submit() {
         r = $.ajax({
             type: "POST",
             url: "https://corporate.ef.com.cn/services/api/school/command/scoring/submitactivityscore?c=countrycode%3dcn%7cculturecode%3dzh-CN%7cpartnercode%3dCncp%7csiteversion%3d20-1%7cstudentcountrycode%3dcn%7cdevicetypeid%3d1%7cproductid%3d100",
-            data: JSON.stringify({ "studentActivityId": aid, "score": 100, "minutesSpent": 1, "studyMode": 0 }),
+            data: JSON.stringify({ "studentActivityId": aid, "score": 100, "minutesSpent": parseInt(Math.random() * 10 + 1), "studyMode": 0 }),
             contentType: "application/json"
         })
         console.log(r)
