@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         EF automachine
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
+// @version      0.2
+// @description  This script will send final status to the server
 // @author       ZarkLngeW
 // @match        https://corporate.ef.com.cn/school/studyplan*
 // @grant        none
