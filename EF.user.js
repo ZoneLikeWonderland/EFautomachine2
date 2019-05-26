@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EF automachine
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  This script will send final status to the server
 // @author       ZarkLngeW
 // @match        https://corporate.ef.com.cn/school/studyplan*
@@ -20,11 +20,11 @@ function polling() {
     setTimeout(function () {
         console.log("waiting")
         polling();
-    }, 1000)
+    }, 2000)
 }
 
 function submit() {
-    $("li[data-at-id][class='ets-ui-acc-act-nav-act']").each(function () {
+    $("li[data-at-id][class^='ets-ui-acc-act-nav-act']").each(function () {
         aid = this.attributes["data-at-id"].value.match(/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}/)[0]
         console.log(aid)
         r = $.ajax({
